@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 spark = SparkSession.builder \
     .appName("HiveExternalTableExample") \
-    .config("hive.metastore.uris", "thrift://cdh02:9083") \
+    .config("hive.metastore.uris", "thrift://cdh01:9083") \
     .config("spark.sql.adaptive.enabled", "true") \
     .config("spark.sql.autoBroadcastJoinThreshold", "104857600") \
     .enableHiveSupport() \
@@ -31,7 +31,7 @@ sc.setLogLevel("INFO")
 target_seatunnel_conf_path = '../../script/seatunnel-conf/batch/bigdata_offline_v1/'
 hive_meta_url = 'thrift://cdh02:9083'
 hive_hadoop_conf_path = "/etc/hadoop/conf"
-hive_warehouse_name = 'bigdata_offline_warehouse_v1'
+hive_warehouse_name = 'bigdata_offline_v1_ws'
 hive_table_prefix_name = 'ods_mysql8_realtime_v1_'
 mysql8_query_sql_prefix = 'select '
 
