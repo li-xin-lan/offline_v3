@@ -180,6 +180,7 @@ def generate_configs_for_tables(mysql_config, hive_metastore_uri, output_dir="./
 if __name__ == "__main__":
     # 数据库连接信息
     mysql_config = {
+
         "host": "cdh03",
         "port": 3306,
         "database": "realtime_v1",# mysql 数据库名
